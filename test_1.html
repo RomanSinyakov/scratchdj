@@ -1,38 +1,33 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Insta360 Embed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-    }
-    .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .insta360-frame {
-      width: 100%;
-      height: 600px;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-<link rel="stylesheet" href="https://unpkg.com/pannellum/build/pannellum.css">
-<script src="https://unpkg.com/pannellum/build/pannellum.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css">
+<script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
 
-<div id="panorama" style="width: 600px; height: 400px;"></div>
+<div style="display:flex; gap:10px;">
+  <div id="pano1" style="width:400px;height:300px;"></div>
+  <div id="pano2" style="width:400px;height:300px;"></div>
+  <div id="pano3" style="width:400px;height:300px;"></div>
+  <div id="pano4" style="width:400px;height:300px;"></div>
+</div>
+
 <script>
-  pannellum.viewer('panorama', {
-    type: 'equirectangular',
-    panorama: 'images/my360photo.jpg'
-  });
+pannellum.viewer('pano1', {
+  type: 'equirectangular',
+  panorama: 'images/my360photo_1.jpg',
+  autoLoad: true
+});
+
+pannellum.viewer('pano2', {
+  type: 'equirectangular',
+  panorama: 'images/my360photo_2.jpg',
+  autoLoad: true
+});
+pannellum.viewer('pano3', {
+  type: 'equirectangular',
+  panorama: 'images/my360photo_3.jpg',
+  autoLoad: true
+});
+pannellum.viewer('pano4', {
+  type: 'equirectangular',
+  panorama: 'images/my360photo_4.jpg',
+  autoLoad: true
+});
 </script>
-  </div>
-</body>
-</html>
