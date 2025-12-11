@@ -23,12 +23,16 @@
 </head>
 <body>
   <div class="wrapper">
-    <iframe
-      class="insta360-frame"
-      src="https://photos.app.goo.gl/7QGDTrUog9r1W4686"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+<link rel="stylesheet" href="https://unpkg.com/pannellum/build/pannellum.css">
+<script src="https://unpkg.com/pannellum/build/pannellum.js"></script>
+
+<div id="panorama" style="width: 600px; height: 400px;"></div>
+<script>
+  pannellum.viewer('panorama', {
+    type: 'equirectangular',
+    panorama: '/images/my360photo.jpg'
+  });
+</script>
   </div>
 </body>
 </html>
